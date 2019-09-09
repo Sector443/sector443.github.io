@@ -783,7 +783,7 @@ a.button-dot:hover:before {
 ====================================== */
 
 #home {    
-    background-image: url(images/hero_image_01.jpg);
+    background-image: url(images/header.jpeg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
