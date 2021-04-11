@@ -762,7 +762,7 @@
                                     <div class="milestone-info-right">
                                         <h5>CTF TIME - https://ctftime.org/ </h5>
                                         <p class="milestone-text">
-                                           <iframe src="https://ctftime.org/team/31136"></iframe>
+                                           <div id=pull_ctftime_rank></div>
                                         </p>
                                     </div>
                                 </li>
@@ -774,7 +774,7 @@
                                     <div class="milestone-info-right">
                                         <h5>Hack the box - https://www.hackthebox.eu/</h5>
                                         <p class="milestone-text">
-                                            <iframe src="https://ctftime.org/team/31136"></iframe>
+                                            <div id=pull_hackthebox_rank></div>
                                         </p>
                                     </div>
                                 </li>
@@ -861,4 +861,16 @@
         <script src='js/jquery.sticky-kit.min.js'></script>                          
         <script src='js/main.js'></script>
     </body>
+ <script>
+ const Http = new XMLHttpRequest();
+ const url='https://akashthakur.me:9090/sector443_rank_ctftime';
+ Http.open("GET", url);
+ Http.send();
+
+ Http.onreadystatechange = (e) => {
+  var respo = Http.responseText
+  var div = document.getElementById('pull_ctftime_rank');
+  div.innerHTML += respo;
+}
+</script>
 </html>
